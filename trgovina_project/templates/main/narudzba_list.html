@@ -1,0 +1,22 @@
+
+{% block content %}
+    <h2>Narudzbe</h2>
+    <ul>
+        {% for narudzba in object_list %}
+            <li>
+                datum: {{ narudzba.datum_narudzbe }}
+                adresa: {{ narudzba.adresa_isporuke }}
+                placena: {{ narudzba.placena }}
+                </br>
+                kosarica: 
+                {% for p in narudzba.kosarica.proizvodi.objects.all %}
+                  <li>
+                    Naziv proizvoda: {{ p.naziv }}<br>
+                    Cijena: {{ p.cijena }}<br>
+                  </li>
+                  {% endfor %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
