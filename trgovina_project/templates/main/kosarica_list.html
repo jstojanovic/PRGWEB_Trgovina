@@ -1,0 +1,19 @@
+{% block content %}
+    <h2>Kosarice</h2>
+    <ul>
+        {% for kosarica in object_list %}
+            <li>
+                kupac: {{ kosarica.kupac }}
+                </br>
+                proizvodi: 
+                {% for p in kosarica.proizvodi.objects.all %}
+                  <li>
+                    Naziv proizvoda: {{ p.naziv }}<br>
+                    Cijena: {{ p.cijena }}<br>
+                  </li>
+                  {% endfor %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

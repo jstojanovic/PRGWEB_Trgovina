@@ -1,0 +1,12 @@
+{% block content %}
+    <h2>Proizvodi</h2>
+    <ul>
+        {% for proizvod in object_list %}
+            <li>
+                naziv: {{ proizvod.naziv }}<br>
+                cijena: {{ proizvod.cijena }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

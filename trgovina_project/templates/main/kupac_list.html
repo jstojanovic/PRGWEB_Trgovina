@@ -1,0 +1,12 @@
+{% block content %}
+    <h2>Kupci</h2>
+    <ul>
+        {% for kupac in object_list %}
+            <li>
+                ime: {{ kupac.ime }}<br>
+                prezime: {{ kupac.prezime }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

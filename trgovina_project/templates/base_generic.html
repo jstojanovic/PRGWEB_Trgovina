@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <h1>Moja trgovina</h1>
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="/main">Home</a></li>
+            <li><a href="/main/proizvodi">Proizvodi</a></li>
+            <li><a href="/main/kupci">Kupci</a></li>
+            <li><a href="/main/kosarice">Kosarice</a></li>
+
+        </ul>
+        {% endblock %}
+    </div>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
+
